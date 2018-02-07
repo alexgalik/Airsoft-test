@@ -11,10 +11,10 @@ import './styles/PostsPage.css'
 class PostsPage extends Component {
 
     state = {
-        id : this.props.post ? this.props.post.id : null,
-        title: this.props.post ? this.props.post.title : '',
-        body: this.props.post ? this.props.post.body : '',
-        comments: this.props.comments ? this.props.comments : [],
+        id : null,
+        title: '',
+        body: '',
+        comments: [],
         commentBody: "",
         isEditingOpen: false,
         errors: ""
@@ -26,12 +26,14 @@ class PostsPage extends Component {
     }
 
     componentWillReceiveProps(nextProps){
-        this.setState({
-            id: nextProps.post.id,
-            title: nextProps.post.title,
-            body: nextProps.post.body,
-            comments: nextProps.comments
-        })
+        if (nextProps.post){
+            this.setState({
+                id: nextProps.post.id,
+                title: nextProps.post.title,
+                body: nextProps.post.body,
+                comments: nextProps.comments
+            })
+        }            
     }
 
     TogglePostModal = () => {
