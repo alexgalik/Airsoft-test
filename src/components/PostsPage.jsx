@@ -130,7 +130,10 @@ class PostsPage extends Component {
 
 PostsPage.propTypes = {
     fetchComments: PropTypes.func.isRequired,
-    fetchPost: PropTypes.func.isRequired
+    fetchPost: PropTypes.func.isRequired,
+    saveComment: PropTypes.func.isRequired, 
+    updatePost: PropTypes.func.isRequired, 
+    deletePost: PropTypes.func.isRequired
   }
 
 const mapStateToProps = (state, props) => {
