@@ -32,8 +32,9 @@ export default class AddNewProject extends Component {
     }
     render(){
         return(
-            <div className = "project_modal">
+            <div className = "project_modal">                
                 <form onSubmit={this.SendNewPost} className="ui form">
+                    {this.props.children}
                     <div className="field">
                         <input 
                             type="text"

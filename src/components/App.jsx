@@ -32,7 +32,7 @@ class App extends Component {
 
         {this.state.isAddNewPostOpen &&
           ReactDOM.createPortal(
-            <AddNewPost onClose = {this.TogglePostModal.bind(this)}  onSubmit = {this.handleNewPost.bind(this)}/>,
+            <AddNewPost onClose = {this.TogglePostModal.bind(this)}  onSubmit = {this.handleNewPost.bind(this)}><h1>Add new post</h1></AddNewPost>,
             document.getElementById('post_portal')
           )          
         }

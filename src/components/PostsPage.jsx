@@ -89,7 +89,13 @@ class PostsPage extends Component {
 
                 {this.state.isEditingOpen &&
                     ReactDOM.createPortal(
-                        <AddNewPost onClose = {this.TogglePostModal.bind(this)} onSubmit = {this.updatePost.bind(this)} post = {{"title": this.state.title, "body": this.state.body}}/>,
+                        <AddNewPost 
+                            onClose = {this.TogglePostModal.bind(this)} 
+                            onSubmit = {this.updatePost.bind(this)} 
+                            post = {{"title": this.state.title, "body": this.state.body}}
+                        >
+                            <h1>Edit this post</h1>
+                        </AddNewPost>,
                         document.getElementById('post_portal')
                     )          
                 }
