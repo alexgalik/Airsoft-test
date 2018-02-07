@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 import {fetchPost, updatePost, deletePost} from '../actions/postsActions';
 import {fetchComments, saveComment} from '../actions/commentsActions';
 import AddNewPost from "./AddNewPost"
-import './PostsPage.css'
+import './styles/PostsPage.css'
 
 class PostsPage extends Component {
 

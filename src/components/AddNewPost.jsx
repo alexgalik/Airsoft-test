@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './AddNewPost.css'
+import './styles/AddNewPost.css'
 
 export default class AddNewProject extends Component {
 
